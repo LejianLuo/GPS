@@ -1,0 +1,23 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "./gps.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/"
+      },
+      {
+        "src": "/all/:_id",
+        "dest": "/all"
+      },
+      {
+        "src": "/coord",
+        "dest": "/coord"
+      }
+    ]
+  }
