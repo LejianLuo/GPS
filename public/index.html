@@ -1,0 +1,72 @@
+<!-- HTML document designed as a form page to collect address information for GPS retrieval -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Address</title>
+
+        <!-- Link to the Bootstrap CSS file hosted on a CDN allows us to style and layout our code using Bootstrap framework -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" 
+            integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+       
+        <div id="forms">
+           
+            <!-- This line begins HTML code which creates a form that will send a POST request to the gps.html -->
+            <form class="address-form" action="/gps" method="POST">
+                <h1>Address</h1>
+                <!-- Labels and input fields for all the address components made up of form-label and form-control within a form-group made -->
+                <div class="form-group">
+                    <label for="streetNumber" class="form-label">Street Number:</label>
+                    <input type="text" id="streetNumber" name="streetNumber" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="streetName" class="form-label">Street Name:</label>
+                    <input type="text" id="streetName" name="streetName" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="city" class="form-label">City:</label>
+                    <input type="text" id="city" name="city" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="stateProvince" class="form-label">State/Province:</label>
+                    <input type="text" id="stateProvince" name="stateProvince" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="country" class="form-label">Country:</label>
+                    <input type="text" id="country" name="country" class="form-control">
+                </div>
+                <br>
+                <!-- Submit button-->
+                <input type="submit" value="Submit">
+                <!-- Clear button -->
+                <input type="reset" value="Clear">
+            </form>
+
+            <form class="address-form" action="/coord" method="POST">
+                <!-- Labels and input fields for all the coordinate components made up of form-label and form-control within a form-group made -->
+                <h1>Coordinates</h1>
+                <div class="form-group">
+                    <label for="latitude" class="form-label">Latitude:</label>
+                    <input type="text" id="latitude" name="latitude" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="longitude" class="form-label">Longitude:</label>
+                    <input type="text" id="longitude" name="longitude" class="form-control">
+                </div>
+                <br>
+                <!-- Submit button-->
+                <input type="submit" value="Submit">
+                <!-- Clear button -->
+                <input type="reset" value="Clear">
+            </form>
+            <div>
+                <h1>View All</h1>
+                <a href="/all"><img src="https://cdn-icons-png.flaticon.com/512/1865/1865269.png" alt="Google Maps Logo"></a>
+            </div>
+        </div>
+    </body>
+</html>

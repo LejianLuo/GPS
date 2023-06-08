@@ -1,0 +1,53 @@
+<!-- HTML document designed to show all addresses and coordinates stored in database -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>GPS</title>
+
+        <!-- Link to the Bootstrap CSS file hosted on a CDN allows us to style and layout our code using Bootstrap framework -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" 
+            integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <style>
+            table, th, td {
+                border: 1px solid;
+                padding:5px;
+            }
+            table{
+                margin:0 auto;
+            }
+            h1{
+                color:#006341;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <!--redirect back to homepage-->
+        <a href="/"><h1>All Entries</h1></a>
+        <!--table for displaying all addresses, lat, lng-->
+        <table>
+            <tr>
+                <th>Address</th>
+                <th>Latitude</th>
+                <th>Longitude</th>
+                <th></th>
+            </tr>
+            <% addresses.forEach(address=>{%>
+                <tr>
+                    <!--embed link in address to show targeted address in google map-->
+                    <th><a target="_blank" href=<%=`http://www.google.com/maps/place/${address.location.lat},${address.location.lng}`%>><%=address.address%></a></th>
+                    <th><%=address.location.lat%></th>
+                    <th><%=address.location.lng%></th>
+                    <!--append id from database to each row for deletion request-->
+                    <th><a href=<%=`/all/${address.id}`%>>delete</a></th>
+                </tr>
+                
+            <%});%>
+
+        </table>
+        
+    </body>
+</html>

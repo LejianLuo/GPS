@@ -1,0 +1,64 @@
+/* CSS style document*/
+body {
+    background-image: url('https://beyereye.com/wp-content/uploads/2017/08/google-map-background-1900x1170.png');
+    background-repeat: no-repeat;
+}
+.header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+h1{
+    color:#006341;
+    margin-top: 50px;
+}
+
+/* Style the image */
+img {
+   max-width: 150px;
+   max-height: 100px;
+}
+/* Style the form-groups */
+form{
+    min-width: 400px;
+    margin: 0 50px 0;
+}
+.form-group {
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
+/* Style the labels */
+label {
+    font-weight: bold;
+    padding-left: 10px;
+}
+/* Style the texts */
+input[type="text"] {
+    max-width: 500px;
+    padding-left: 10px;
+    border-color: #006341;
+}
+input[readonly] {
+    pointer-events: none;
+    background-color: rgb(226, 226, 226);
+}
+/* Style the submit */
+input[type="submit"], input[type="reset"], input[type="button"] {
+    margin-left: 10px;
+    color: #ffffff;
+    background-color: #006341;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover {
+    background-color: #004d2e;
+  }
+/*div for forms on the homepage*/  
+#forms{
+    display:flex;
+}
+a{
+    text-decoration: none;
+}

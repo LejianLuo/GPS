@@ -1,0 +1,31 @@
+<!-- HTML document designed to catch errors -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>GPS</title>
+
+        <!-- Link to the Bootstrap CSS file hosted on a CDN allows us to style and layout our code using Bootstrap framework -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" 
+            integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <style>
+            body,h1,h3{
+                text-align: center;
+                display:block;
+                color:#006341;
+            }
+        </style>
+    </head>
+    <body>
+        <!--error page, redirect back to homepage-->
+        <a href="/"><h1>Back to Homepage</h1> </a>
+        <br>
+        <h1>potential errors:</h1>
+        <h3>empty address or coordinates input</h3>
+        <h3>incorrect address or coordinates input</h3>
+        <h3>One location can not be stored twice</h3>
+        <h3>GEOCODE API key has expired</h3>
+    </body>
+</html>
